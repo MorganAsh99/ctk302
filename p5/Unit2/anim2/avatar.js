@@ -1,0 +1,23 @@
+function avatar(){
+//man
+fill('#C6B8B8')
+rect(735, 280, 175, 20)
+rect(735, 280, 15, 110)
+rect(895, 280, 15, 110)
+rect(775, 280, 100, 200)
+rect(785, 450, 15, 110)
+rect(850, 450, 15, 110)
+ellipse(825, 250, 50, 75)
+fill('white')
+ellipse(815, 240, 12, 12)
+ellipse(830, 240, 12, 12)
+fill('blue')
+ellipse(815, 240, 7, 7)
+ellipse(830, 240, 7, 7)
+fill("#613737")
+rect(775, 430, 100, 50)
+fill('black')
+ellipse(800, 565, 45, 15)
+ellipse(850, 565, 45, 15)
+rect(815, 260, 15, 3)
+}
