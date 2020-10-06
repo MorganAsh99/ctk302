@@ -11,7 +11,7 @@ function setup() {
   mic.start();
 }
 
-
+//just becuase
 function draw() {
   background(c);
   fill('white');
