@@ -3,6 +3,7 @@ var img1, img2, img3;
 var mic;
 var vol;
 let timer = 0;
+var x=0;
 
 function setup() {
   createCanvas(1200, 650);
@@ -48,7 +49,7 @@ function draw() {
       rect(500, 600, 200, 20);
       text("Progress", width /2, 580);
       fill('red');
-      rect(300, 600, 200, 20);
+      rect(300 + x, 600, 200, 20);
       noStroke();
       fill("#1342B8");
       rect(300, 550, 200, 100);
@@ -80,7 +81,7 @@ function draw() {
 
   if (vol > .01 && (vol < .10)) { // if the volume is LOUD?
     // do something
-    state = 2;
+    x = x + 5;
   }
 
 }
