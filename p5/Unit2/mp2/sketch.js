@@ -54,7 +54,7 @@ function draw() {
       fill("#1342B8");
       rect(300, 550, 200, 100);
       fill('white');
-      text("volume" + vol, 100, 60);
+      text("volume " + vol, 100, 60);
       break;
 
     case 2:
@@ -67,7 +67,7 @@ function draw() {
       rect(1050, 350, 100, 180);
       image(img3, 735, 300, 380, 250);
       timer = timer + 1
-      if (timer > 200) {
+      if (timer > 500) {
         state = 3;
         timer = 0;
       }
@@ -81,7 +81,7 @@ function draw() {
 
   if (vol > .01 && (vol < .10)) { // if the volume is LOUD?
     // do something
-    x = x + 5;
+    x = x + 20;
   }
 
 }
