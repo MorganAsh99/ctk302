@@ -79,11 +79,6 @@ function draw() {
       break;
   }
 
-  if (vol > .01 && (vol < .10)) { // if the volume is LOUD?
-    // do something
-    x = x + 20;
-  }
-
 }
 
 function mouseReleased() {
