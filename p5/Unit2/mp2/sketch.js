@@ -3,7 +3,7 @@ var img1, img2, img3;
 var mic;
 var vol;
 let timer = 0;
-var x=0;
+var x = 0;
 
 function setup() {
   createCanvas(1200, 650);
@@ -47,7 +47,7 @@ function draw() {
       fill('white');
       stroke(7);
       rect(500, 600, 200, 20);
-      text("Progress", width /2, 580);
+      text("Progress", width / 2, 580);
       fill('red');
       rect(300 + x, 600, 200, 20);
       noStroke();
@@ -83,19 +83,24 @@ function draw() {
     x = x + 20;
   }
 
-  if (x = 200){
-    state = 2
+  if (x > 260) {
+    x = 0;
+  }
+
+  if (x = 200) {
+    state = 2;
   }
 }
 
 function mouseReleased() {
-  if((mouseX>750) && (mouseX<1150) && (mouseY>350) && (mouseY<530)){
-   state = state + 1;
+  if ((mouseX > 750) && (mouseX < 1150) && (mouseY > 350) && (mouseY < 530)) {
+    state = state + 1;
+  }
+  if (state > 3) {
+    state = 0;
+  }
 }
-if (state > 3) {
-  state = 0;
-}
-}
+
 function touchStarted() {
   getAudioContext().resume();
 }
