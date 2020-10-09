@@ -54,7 +54,7 @@ vol = (mic.getLevel()).toFixed(2);
       fill("#1342B8");
       rect(300, 550, 200, 100);
       if (vol > .01 && (vol < .10)) {
-        x = x + 20;
+        x = x + 10;
       }
       if (x > 190){
         state++;
