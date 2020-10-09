@@ -79,6 +79,13 @@ function draw() {
       break;
   }
 
+  if (vol > .01 && (vol < .10)) {
+    x = x + 20
+  }
+
+  if (x = 200){
+    state = 2
+  }
 }
 
 function mouseReleased() {
