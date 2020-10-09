@@ -2,6 +2,8 @@ let state = 0;
 var img1, img2, img3;
 let timer = 0;
 var x = 0;
+var mic;
+var vol;
 
 function setup() {
   createCanvas(1200, 650);
@@ -10,9 +12,13 @@ function setup() {
   img1 = loadImage('assets/standing.png');
   img2 = loadImage('assets/laying.png');
   img3 = loadImage('assets/sleeping.png');
+  mic = new p5.AudioIn();
+  mic.start();
 }
 
 function draw() {
+
+vol = (mic.getLevel()).toFixed(2);
 
   switch (state) {
     case 0:
@@ -43,12 +49,16 @@ function draw() {
       rect(500, 600, 200, 20);
       text("Progress", width / 2, 580);
       fill('red');
-      rect(x, 600, 200, 20);
+      rect(300 + x, 600, 200, 20);
       noStroke();
       fill("#1342B8");
       rect(300, 550, 200, 100);
-      fill('white');
-      text("volume " + vol, 100, 60);
+      if (vol > .01 && (vol < .10)) {
+        x = x + 20;
+      }
+      if (x > 190){
+        state++;
+      }
       break;
 
     case 2:
@@ -65,6 +75,7 @@ function draw() {
         state = 3;
         timer = 0;
       }
+      x = 0;
       break;
 
     case 3:
