@@ -1,7 +1,5 @@
 let state = 0;
 var img1, img2, img3;
-var mic;
-var vol;
 let timer = 0;
 var x = 0;
 
@@ -12,13 +10,9 @@ function setup() {
   img1 = loadImage('assets/standing.png');
   img2 = loadImage('assets/laying.png');
   img3 = loadImage('assets/sleeping.png');
-  mic = new p5.AudioIn();
-  mic.start();
 }
 
 function draw() {
-
-  vol = (mic.getLevel()).toFixed(2);
 
   switch (state) {
     case 0:
@@ -49,7 +43,7 @@ function draw() {
       rect(500, 600, 200, 20);
       text("Progress", width / 2, 580);
       fill('red');
-      rect(300 + x, 600, 200, 20);
+      rect(x, 600, 200, 20);
       noStroke();
       fill("#1342B8");
       rect(300, 550, 200, 100);
@@ -78,21 +72,12 @@ function draw() {
       text("state 3", width / 2, height / 2)
       break;
   }
-
-  if (vol > .01 && (vol < .10)) {
-    x = x + 20;
-  }
-
-  if (x > 260) {
-    x = 0;
-  }
-
-  if (x = 200) {
-    state = 2;
-  }
 }
 
 function mouseReleased() {
+  if ((mouseX > 500) && (mouseX < 700) && (mouseY > 600) && (mouseY < 620)) {
+    x = x + 20;
+  }
   if ((mouseX > 750) && (mouseX < 1150) && (mouseY > 350) && (mouseY < 530)) {
     state = state + 1;
   }
