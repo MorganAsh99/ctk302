@@ -80,7 +80,7 @@ function draw() {
   }
 
   if (vol > .01 && (vol < .10)) {
-    x = x + 20
+    x = x + 20;
   }
 
   if (x = 200){
