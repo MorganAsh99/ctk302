@@ -79,8 +79,14 @@ vol = (mic.getLevel()).toFixed(2);
       break;
 
     case 3:
-      background('white')
-      text("state 3", width / 2, height / 2)
+      background("white");
+      fill(random(255), random(255), random(255));
+      text("CONGRATULATIONS", mouseX, mouseY);
+      timer = timer + 1
+      if (timer > 1000) {
+        state = 0;
+        timer = 0;
+      }
       break;
   }
 }
