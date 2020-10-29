@@ -11,6 +11,8 @@ function draw() {
   fill('black')
   rect(0, 550, 1550, 215)
 
+
+
   //cloud
   fill("gray")
   ellipse(1400, 95, 100, 100)
@@ -18,7 +20,7 @@ function draw() {
   ellipse(1350, 85, 100, 100)
   fill("yellow")
   triangle(1380, 105, 1390, 115, 1385, 200)
-  
+
   //man2
   fill('#848689')
   rect(775, 150, 100, 200)
@@ -93,11 +95,7 @@ function draw() {
 }
 
 //background description
-// I was a goat last week and now I am not.
-// I have some memories from when I was a goat but not many.
-// I am so so so poor and people think
-// I am gross and don't want to be around me.
-// Why won't they look into my eyes? I think they would understand.
-// I live in Gullen. I have no home.
-// I can only sleep if the top of my head is pointing North.
-// I fell into a lava pit and I was fine. I want to discover what love is.
+// I was a goat last week and now I am not.I have some memories from when I was a goat but not many.
+//  I am so so so poor and people think. I am gross and dont want to be around me.Why wont they look into my eyes? I think they would understand.
+//  I live in Gullen. I have no home.I can only sleep if the top of my head is pointing North.
+//  I fell into a lava pit and I was fine. I want to discover what love is.
